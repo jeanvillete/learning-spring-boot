@@ -1,0 +1,200 @@
+2019-02-03 12:43:28.010  INFO [-,,,] 22601 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3d41097d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.2.RELEASE)
+
+2019-02-03 12:43:30.540  INFO [currency-exchange-service,,,] 22601 --- [           main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2019-02-03 12:43:31.987  INFO [currency-exchange-service,,,] 22601 --- [           main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-02-03 12:43:31.989  WARN [currency-exchange-service,,,] 22601 --- [           main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/currency-exchange-service/default": Connection refused; nested exception is java.net.ConnectException: Connection refused
+2019-02-03 12:43:32.021  INFO [currency-exchange-service,,,] 22601 --- [           main] i.m.c.CurrencyExchangeServiceApplication : No active profile set, falling back to default profiles: default
+2019-02-03 12:43:40.106  INFO [currency-exchange-service,,,] 22601 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-03 12:43:41.329  INFO [currency-exchange-service,,,] 22601 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1093ms. Found 1 repository interfaces.
+2019-02-03 12:43:46.670  INFO [currency-exchange-service,,,] 22601 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4593af1c-d84d-3dca-ba88-0bc1ecf93f69
+2019-02-03 12:43:52.999  INFO [currency-exchange-service,,,] 22601 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$21270680] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:43:53.786  INFO [currency-exchange-service,,,] 22601 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3d41097d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-03 12:44:01.533  INFO [currency-exchange-service,,,] 22601 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8003 (http)
+2019-02-03 12:44:01.958  INFO [currency-exchange-service,,,] 22601 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-03 12:44:01.958  INFO [currency-exchange-service,,,] 22601 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-03 12:44:02.133  INFO [currency-exchange-service,,,] 22601 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-02-03 12:44:03.403  INFO [currency-exchange-service,,,] 22601 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-03 12:44:03.422  INFO [currency-exchange-service,,,] 22601 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 31190 ms
+2019-02-03 12:44:11.413  INFO [currency-exchange-service,,,] 22601 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-03 12:44:14.165  INFO [currency-exchange-service,,,] 22601 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-03 12:44:15.357  INFO [currency-exchange-service,,,] 22601 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-03 12:44:16.746  INFO [currency-exchange-service,,,] 22601 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-03 12:44:16.796  INFO [currency-exchange-service,,,] 22601 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-03 12:44:19.608  INFO [currency-exchange-service,,,] 22601 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-03 12:44:22.581  INFO [currency-exchange-service,,,] 22601 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table exchange_value if exists
+Hibernate: create table exchange_value (id bigint not null, conversion_multiple decimal(19,2), currency_from varchar(255), currency_to varchar(255), primary key (id))
+2019-02-03 12:44:32.625  INFO [currency-exchange-service,,,] 22601 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@24d09c1'
+2019-02-03 12:44:32.677  INFO [currency-exchange-service,,,] 22601 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 12:44:40.730  WARN [currency-exchange-service,,,] 22601 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-02-03 12:44:40.730  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-02-03 12:44:40.831  WARN [currency-exchange-service,,,] 22601 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-02-03 12:44:40.831  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-02-03 12:44:47.355  INFO [currency-exchange-service,,,] 22601 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-03 12:44:48.728  WARN [currency-exchange-service,,,] 22601 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-02-03 12:45:01.961  INFO [currency-exchange-service,,,] 22601 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-02-03 12:45:02.825  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-02-03 12:45:05.579  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-02-03 12:45:05.580  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-02-03 12:45:08.443  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-02-03 12:45:08.444  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-02-03 12:45:11.970  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 12:45:12.412  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-02-03 12:45:12.413  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-02-03 12:45:12.413  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-02-03 12:45:12.413  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-02-03 12:45:12.413  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-02-03 12:45:12.413  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-02-03 12:45:12.414  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-02-03 12:45:16.425  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-02-03 12:45:16.479  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-02-03 12:45:16.498  INFO [currency-exchange-service,,,] 22601 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-02-03 12:45:16.548  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1549205116546 with initial instances count: 1
+2019-02-03 12:45:16.706  INFO [currency-exchange-service,,,] 22601 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CURRENCY-EXCHANGE-SERVICE with eureka with status UP
+2019-02-03 12:45:16.713  INFO [currency-exchange-service,,,] 22601 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1549205116713, current=UP, previous=STARTING]
+2019-02-03 12:45:16.727  INFO [currency-exchange-service,,,] 22601 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CURRENCY-EXCHANGE-SERVICE/192.168.15.121:currency-exchange-service:8003: registering service...
+2019-02-03 12:45:17.184  INFO [currency-exchange-service,,,] 22601 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CURRENCY-EXCHANGE-SERVICE/192.168.15.121:currency-exchange-service:8003 - registration status: 204
+2019-02-03 12:45:17.291  INFO [currency-exchange-service,,,] 22601 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8003 (http) with context path ''
+2019-02-03 12:45:17.332  INFO [currency-exchange-service,,,] 22601 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8003
+2019-02-03 12:45:17.390  INFO [currency-exchange-service,,,] 22601 --- [           main] i.m.c.CurrencyExchangeServiceApplication : Started CurrencyExchangeServiceApplication in 121.662 seconds (JVM running for 125.398)
+2019-02-03 12:50:12.445  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 12:55:12.446  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:00:12.447  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:05:12.448  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:10:12.449  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:15:12.450  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:20:12.451  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:25:12.452  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:30:12.454  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:35:12.455  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:40:12.456  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:45:12.457  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:50:12.458  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 13:55:12.459  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:00:12.460  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:05:12.461  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:10:12.461  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:15:12.462  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:20:12.463  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:25:12.464  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:30:12.465  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:35:12.466  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:40:12.467  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:45:12.468  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:50:12.469  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 14:55:12.469  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:00:12.470  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:05:12.473  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:10:12.474  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:15:12.475  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:20:12.480  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:25:12.481  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:30:12.482  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:35:12.483  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:40:12.484  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:45:12.485  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:50:12.486  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 15:55:12.486  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:00:12.487  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:05:12.488  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:10:12.489  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:15:12.490  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:20:12.491  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:25:12.492  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:30:12.493  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:35:12.494  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:40:12.495  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:45:12.495  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:50:12.496  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 16:55:12.497  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:00:12.498  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:05:12.499  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:10:12.500  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:15:12.501  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:20:12.502  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:25:12.503  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:30:12.504  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:35:12.505  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:40:12.506  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:45:12.507  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:50:12.507  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 17:55:12.508  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:00:12.509  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:05:12.510  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:10:12.511  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:15:12.512  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:20:12.513  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:25:12.514  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:30:12.515  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:35:12.516  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:40:12.517  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:45:12.518  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:50:12.519  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 18:55:12.520  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:00:12.521  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:05:12.521  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:10:12.522  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:15:12.523  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:20:12.524  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:25:12.525  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:30:12.526  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:35:12.527  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:40:12.528  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:45:12.529  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:50:12.529  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 19:55:12.530  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:00:12.531  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:05:12.532  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:10:12.533  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:15:12.533  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:20:12.534  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:25:12.535  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:30:12.536  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:35:12.537  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:40:12.538  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:45:12.539  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:50:12.539  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 20:55:12.540  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:00:12.541  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:05:12.542  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:10:12.543  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:15:12.544  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:20:12.544  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:25:12.545  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:30:12.546  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:35:12.547  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:40:12.547  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:45:12.548  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:50:12.549  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 21:55:12.550  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:00:12.553  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:05:12.554  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:10:12.557  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:15:12.559  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:20:12.562  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:25:12.565  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:30:12.565  INFO [currency-exchange-service,,,] 22601 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-02-03 22:30:43.090  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CURRENCY-EXCHANGE-SERVICE with eureka with status DOWN
+2019-02-03 22:30:43.092  WARN [currency-exchange-service,,,] 22601 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1549240243091, current=DOWN, previous=UP]
+2019-02-03 22:30:43.093  INFO [currency-exchange-service,,,] 22601 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CURRENCY-EXCHANGE-SERVICE/192.168.15.121:currency-exchange-service:8003: registering service...
+2019-02-03 22:30:43.102  INFO [currency-exchange-service,,,] 22601 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CURRENCY-EXCHANGE-SERVICE/192.168.15.121:currency-exchange-service:8003 - registration status: 204
+2019-02-03 22:30:43.139  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-03 22:30:43.169  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-03 22:30:43.175  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table exchange_value if exists
+2019-02-03 22:30:43.215  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-02-03 22:30:46.217  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-02-03 22:30:46.228  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CURRENCY-EXCHANGE-SERVICE/192.168.15.121:currency-exchange-service:8003 - deregister  status: 200
+2019-02-03 22:30:46.261  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-02-03 22:30:46.262  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-03 22:30:46.277  INFO [currency-exchange-service,,,] 22601 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

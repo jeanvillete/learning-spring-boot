@@ -1,0 +1,9 @@
+**/*.iml
+**/.idea/
+**/*.jar
+eureka
+zuul
+zipkin/
+**/.mvn
+git-localconfig-repo/.git
+**/target/
