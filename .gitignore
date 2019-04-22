@@ -7,3 +7,4 @@ zipkin/
 **/.mvn
 git-localconfig-repo/.git
 **/target/
+**/*.log
