@@ -1,0 +1,20 @@
+### Versioning
+    - Media type versioning (a.k.a "content negotiation" or "accept header")
+        - GitHub
+    - (Custom) headers versioning
+        - Microsoft
+    - URI Versioning
+        - Twitter
+    - Parameter versioning
+        - Amazon
+    - Factors
+        - URI Pollution
+        - Misuse of HTTP Headers
+        - Caching
+        - Can we execute the request on the browser?
+        - API Documentation
+        - No Perfect Solution
+
+### More
+- https://www.mnot.net/blog/2011/10/25/web_api_versioning_smackdown
+- http://urthen.github.io./2013/05/09/ways-to-version-your-api
